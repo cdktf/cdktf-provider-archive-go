@@ -3,10 +3,10 @@ package archive
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/hashicorp/cdktf-provider-archive-go/archive/jsii"
+	_init_ "github.com/hashicorp/cdktf-provider-archive-go/archive/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/hashicorp/cdktf-provider-archive-go/archive/internal"
+	"github.com/hashicorp/cdktf-provider-archive-go/archive/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -368,6 +368,10 @@ type DataArchiveFile interface {
 	SetExcludes(val *[]*string)
 	ExcludesInput() *[]*string
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -526,6 +530,16 @@ func (j *jsiiProxy_DataArchiveFile) ExcludesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"excludesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataArchiveFile) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -888,6 +902,14 @@ func (j *jsiiProxy_DataArchiveFile) SetExcludes(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"excludes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataArchiveFile) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -1295,13 +1317,19 @@ func (d *jsiiProxy_DataArchiveFile) ToTerraform() interface{} {
 
 type DataArchiveFileConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#output_path DataArchiveFile#output_path}.
 	OutputPath *string `field:"required" json:"outputPath" yaml:"outputPath"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#type DataArchiveFile#type}.
@@ -1996,6 +2024,10 @@ type File interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -2008,6 +2040,10 @@ type File interface {
 	Excludes() *[]*string
 	SetExcludes(val *[]*string)
 	ExcludesInput() *[]*string
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -2035,6 +2071,10 @@ type File interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	Source() FileSourceList
@@ -2122,6 +2162,16 @@ func (j *jsiiProxy_File) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_File) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_File) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -2167,6 +2217,16 @@ func (j *jsiiProxy_File) ExcludesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"excludesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_File) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -2317,6 +2377,16 @@ func (j *jsiiProxy_File) Provider() cdktf.TerraformProvider {
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_File) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
 		&returns,
 	)
 	return returns
@@ -2509,6 +2579,14 @@ func NewFile_Override(f File, scope constructs.Construct, id *string, config *Fi
 	)
 }
 
+func (j *jsiiProxy_File) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_File) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -2529,6 +2607,14 @@ func (j *jsiiProxy_File) SetExcludes(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"excludes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_File) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -2569,6 +2655,14 @@ func (j *jsiiProxy_File) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_File) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -2936,13 +3030,19 @@ func (f *jsiiProxy_File) ToTerraform() interface{} {
 
 type FileConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_path File#output_path}.
 	OutputPath *string `field:"required" json:"outputPath" yaml:"outputPath"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#type File#type}.

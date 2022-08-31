@@ -185,6 +185,9 @@ func (j *jsiiProxy_ArchiveProvider) TerraformResourceType() *string {
 func NewArchiveProvider(scope constructs.Construct, id *string, config *ArchiveProviderConfig) ArchiveProvider {
 	_init_.Initialize()
 
+	if err := validateNewArchiveProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ArchiveProvider{}
 
 	_jsii_.Create(
@@ -207,7 +210,7 @@ func NewArchiveProvider_Override(a ArchiveProvider, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_ArchiveProvider) SetAlias(val *string) {
+func (j *jsiiProxy_ArchiveProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -235,6 +238,9 @@ func (j *jsiiProxy_ArchiveProvider) SetAlias(val *string) {
 func ArchiveProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateArchiveProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -259,6 +265,9 @@ func ArchiveProvider_TfResourceType() *string {
 }
 
 func (a *jsiiProxy_ArchiveProvider) AddOverride(path *string, value interface{}) {
+	if err := a.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		a,
 		"addOverride",
@@ -267,6 +276,9 @@ func (a *jsiiProxy_ArchiveProvider) AddOverride(path *string, value interface{})
 }
 
 func (a *jsiiProxy_ArchiveProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := a.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		a,
 		"overrideLogicalId",

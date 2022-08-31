@@ -111,6 +111,9 @@ func (j *jsiiProxy_DataArchiveFileSourceList) WrapsSet() *bool {
 func NewDataArchiveFileSourceList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataArchiveFileSourceList {
 	_init_.Initialize()
 
+	if err := validateNewDataArchiveFileSourceListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataArchiveFileSourceList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewDataArchiveFileSourceList_Override(d DataArchiveFileSourceList, terrafor
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_DataArchiveFileSourceList) SetInternalValue(val interface{}) 
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_DataArchiveFileSourceList) SetTerraformAttribute(val *string)
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_DataArchiveFileSourceList) SetTerraformResource(val cdktf.IIn
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (d *jsiiProxy_DataArchiveFileSourceList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceList) Get(index *float64) DataArchiveFileSourceOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataArchiveFileSourceOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (d *jsiiProxy_DataArchiveFileSourceList) Get(index *float64) DataArchiveFil
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

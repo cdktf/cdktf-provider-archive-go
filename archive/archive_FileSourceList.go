@@ -111,6 +111,9 @@ func (j *jsiiProxy_FileSourceList) WrapsSet() *bool {
 func NewFileSourceList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FileSourceList {
 	_init_.Initialize()
 
+	if err := validateNewFileSourceListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_FileSourceList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewFileSourceList_Override(f FileSourceList, terraformResource cdktf.IInter
 	)
 }
 
-func (j *jsiiProxy_FileSourceList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_FileSourceList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_FileSourceList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileSourceList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_FileSourceList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_FileSourceList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileSourceList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_FileSourceList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_FileSourceList) SetTerraformResource(val cdktf.IInterpolating
 	)
 }
 
-func (j *jsiiProxy_FileSourceList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_FileSourceList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (f *jsiiProxy_FileSourceList) ComputeFqn() *string {
 }
 
 func (f *jsiiProxy_FileSourceList) Get(index *float64) FileSourceOutputReference {
+	if err := f.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns FileSourceOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (f *jsiiProxy_FileSourceList) Get(index *float64) FileSourceOutputReference
 }
 
 func (f *jsiiProxy_FileSourceList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := f.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -197,6 +197,9 @@ func (j *jsiiProxy_DataArchiveFileSourceOutputReference) TerraformResource() cdk
 func NewDataArchiveFileSourceOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) DataArchiveFileSourceOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewDataArchiveFileSourceOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataArchiveFileSourceOutputReference{}
 
 	_jsii_.Create(
@@ -218,7 +221,10 @@ func NewDataArchiveFileSourceOutputReference_Override(d DataArchiveFileSourceOut
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_DataArchiveFileSourceOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -226,7 +232,10 @@ func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetComplexObjectIndex(v
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_DataArchiveFileSourceOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -234,7 +243,10 @@ func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetComplexObjectIsFromS
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetContent(val *string) {
+func (j *jsiiProxy_DataArchiveFileSourceOutputReference)SetContent(val *string) {
+	if err := j.validateSetContentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"content",
@@ -242,7 +254,10 @@ func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetContent(val *string)
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetFilename(val *string) {
+func (j *jsiiProxy_DataArchiveFileSourceOutputReference)SetFilename(val *string) {
+	if err := j.validateSetFilenameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"filename",
@@ -250,7 +265,10 @@ func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetFilename(val *string
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_DataArchiveFileSourceOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -258,7 +276,10 @@ func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetInternalValue(val in
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataArchiveFileSourceOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -266,7 +287,10 @@ func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetTerraformAttribute(v
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFileSourceOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataArchiveFileSourceOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -288,6 +312,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -301,6 +328,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetAnyMapAttribute(terr
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -314,6 +344,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetBooleanAttribute(ter
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -327,6 +360,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetBooleanMapAttribute(
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -340,6 +376,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetListAttribute(terraf
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -353,6 +392,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetNumberAttribute(terr
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -366,6 +408,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetNumberListAttribute(
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -379,6 +424,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetNumberMapAttribute(t
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -392,6 +440,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetStringAttribute(terr
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -418,6 +469,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) InterpolationAsList() c
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -431,6 +485,9 @@ func (d *jsiiProxy_DataArchiveFileSourceOutputReference) InterpolationForAttribu
 }
 
 func (d *jsiiProxy_DataArchiveFileSourceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

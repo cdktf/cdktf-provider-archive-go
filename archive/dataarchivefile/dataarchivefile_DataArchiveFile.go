@@ -2,10 +2,10 @@ package dataarchivefile
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-archive-go/archive/v3/dataarchivefile/internal"
+	"github.com/cdktf/cdktf-provider-archive-go/archive/v4/dataarchivefile/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -715,6 +715,44 @@ func DataArchiveFile_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-archive.dataArchiveFile.DataArchiveFile",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataArchiveFile_IsTerraformDataSource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataArchiveFile_IsTerraformDataSourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-archive.dataArchiveFile.DataArchiveFile",
+		"isTerraformDataSource",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataArchiveFile_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataArchiveFile_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-archive.dataArchiveFile.DataArchiveFile",
+		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
 	)

@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package dataarchivefile
 
@@ -58,6 +57,14 @@ func (d *jsiiProxy_DataArchiveFile) validatePutSourceParameters(value interface{
 }
 
 func validateDataArchiveFile_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataArchiveFile_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataArchiveFile_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 

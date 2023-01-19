@@ -72,10 +72,6 @@ func (j *jsiiProxy_DataArchiveFile) validateSetExcludesParameters(val *[]*string
 	return nil
 }
 
-func (j *jsiiProxy_DataArchiveFile) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_DataArchiveFile) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

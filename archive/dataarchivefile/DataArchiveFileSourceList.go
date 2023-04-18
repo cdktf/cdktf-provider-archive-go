@@ -1,14 +1,14 @@
-package file
+package dataarchivefile
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v6/jsii"
 
-	"github.com/cdktf/cdktf-provider-archive-go/archive/v5/file/internal"
+	"github.com/cdktf/cdktf-provider-archive-go/archive/v6/dataarchivefile/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type FileSourceList interface {
+type DataArchiveFileSourceList interface {
 	cdktf.ComplexList
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -30,7 +30,7 @@ type FileSourceList interface {
 	SetWrapsSet(val *bool)
 	// Experimental.
 	ComputeFqn() *string
-	Get(index *float64) FileSourceOutputReference
+	Get(index *float64) DataArchiveFileSourceOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -41,12 +41,12 @@ type FileSourceList interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for FileSourceList
-type jsiiProxy_FileSourceList struct {
+// The jsii proxy struct for DataArchiveFileSourceList
+type jsiiProxy_DataArchiveFileSourceList struct {
 	internal.Type__cdktfComplexList
 }
 
-func (j *jsiiProxy_FileSourceList) CreationStack() *[]*string {
+func (j *jsiiProxy_DataArchiveFileSourceList) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -56,7 +56,7 @@ func (j *jsiiProxy_FileSourceList) CreationStack() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_FileSourceList) Fqn() *string {
+func (j *jsiiProxy_DataArchiveFileSourceList) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -66,7 +66,7 @@ func (j *jsiiProxy_FileSourceList) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_FileSourceList) InternalValue() interface{} {
+func (j *jsiiProxy_DataArchiveFileSourceList) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -76,7 +76,7 @@ func (j *jsiiProxy_FileSourceList) InternalValue() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_FileSourceList) TerraformAttribute() *string {
+func (j *jsiiProxy_DataArchiveFileSourceList) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -86,7 +86,7 @@ func (j *jsiiProxy_FileSourceList) TerraformAttribute() *string {
 	return returns
 }
 
-func (j *jsiiProxy_FileSourceList) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_DataArchiveFileSourceList) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -96,7 +96,7 @@ func (j *jsiiProxy_FileSourceList) TerraformResource() cdktf.IInterpolatingParen
 	return returns
 }
 
-func (j *jsiiProxy_FileSourceList) WrapsSet() *bool {
+func (j *jsiiProxy_DataArchiveFileSourceList) WrapsSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -107,16 +107,16 @@ func (j *jsiiProxy_FileSourceList) WrapsSet() *bool {
 }
 
 
-func NewFileSourceList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FileSourceList {
+func NewDataArchiveFileSourceList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataArchiveFileSourceList {
 	_init_.Initialize()
 
-	if err := validateNewFileSourceListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+	if err := validateNewDataArchiveFileSourceListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_FileSourceList{}
+	j := jsiiProxy_DataArchiveFileSourceList{}
 
 	_jsii_.Create(
-		"@cdktf/provider-archive.file.FileSourceList",
+		"@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
 		&j,
 	)
@@ -124,17 +124,17 @@ func NewFileSourceList(terraformResource cdktf.IInterpolatingParent, terraformAt
 	return &j
 }
 
-func NewFileSourceList_Override(f FileSourceList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
+func NewDataArchiveFileSourceList_Override(d DataArchiveFileSourceList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-archive.file.FileSourceList",
+		"@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
-		f,
+		d,
 	)
 }
 
-func (j *jsiiProxy_FileSourceList)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -145,7 +145,7 @@ func (j *jsiiProxy_FileSourceList)SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileSourceList)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -156,7 +156,7 @@ func (j *jsiiProxy_FileSourceList)SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileSourceList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -167,7 +167,7 @@ func (j *jsiiProxy_FileSourceList)SetTerraformResource(val cdktf.IInterpolatingP
 	)
 }
 
-func (j *jsiiProxy_FileSourceList)SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataArchiveFileSourceList)SetWrapsSet(val *bool) {
 	if err := j.validateSetWrapsSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -178,11 +178,11 @@ func (j *jsiiProxy_FileSourceList)SetWrapsSet(val *bool) {
 	)
 }
 
-func (f *jsiiProxy_FileSourceList) ComputeFqn() *string {
+func (d *jsiiProxy_DataArchiveFileSourceList) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"computeFqn",
 		nil, // no parameters
 		&returns,
@@ -191,14 +191,14 @@ func (f *jsiiProxy_FileSourceList) ComputeFqn() *string {
 	return returns
 }
 
-func (f *jsiiProxy_FileSourceList) Get(index *float64) FileSourceOutputReference {
-	if err := f.validateGetParameters(index); err != nil {
+func (d *jsiiProxy_DataArchiveFileSourceList) Get(index *float64) DataArchiveFileSourceOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
 		panic(err)
 	}
-	var returns FileSourceOutputReference
+	var returns DataArchiveFileSourceOutputReference
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"get",
 		[]interface{}{index},
 		&returns,
@@ -207,14 +207,14 @@ func (f *jsiiProxy_FileSourceList) Get(index *float64) FileSourceOutputReference
 	return returns
 }
 
-func (f *jsiiProxy_FileSourceList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := f.validateResolveParameters(_context); err != nil {
+func (d *jsiiProxy_DataArchiveFileSourceList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"resolve",
 		[]interface{}{_context},
 		&returns,
@@ -223,11 +223,11 @@ func (f *jsiiProxy_FileSourceList) Resolve(_context cdktf.IResolveContext) inter
 	return returns
 }
 
-func (f *jsiiProxy_FileSourceList) ToString() *string {
+func (d *jsiiProxy_DataArchiveFileSourceList) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"toString",
 		nil, // no parameters
 		&returns,

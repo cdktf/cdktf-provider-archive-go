@@ -2,14 +2,14 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-archive-go/archive/v5/provider/internal"
+	"github.com/cdktf/cdktf-provider-archive-go/archive/v6/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/archive archive}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs archive}.
 type ArchiveProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -180,7 +180,7 @@ func (j *jsiiProxy_ArchiveProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/archive archive} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs archive} Resource.
 func NewArchiveProvider(scope constructs.Construct, id *string, config *ArchiveProviderConfig) ArchiveProvider {
 	_init_.Initialize()
 
@@ -198,7 +198,7 @@ func NewArchiveProvider(scope constructs.Construct, id *string, config *ArchiveP
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/archive archive} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs archive} Resource.
 func NewArchiveProvider_Override(a ArchiveProvider, scope constructs.Construct, id *string, config *ArchiveProviderConfig) {
 	_init_.Initialize()
 

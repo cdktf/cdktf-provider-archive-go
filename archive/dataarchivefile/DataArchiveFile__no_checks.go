@@ -68,6 +68,10 @@ func validateDataArchiveFile_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_DataArchiveFile) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataArchiveFile) validateSetExcludesParameters(val *[]*string) error {
 	return nil
 }

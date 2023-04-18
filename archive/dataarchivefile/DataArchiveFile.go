@@ -2,14 +2,14 @@ package dataarchivefile
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-archive-go/archive/v5/dataarchivefile/internal"
+	"github.com/cdktf/cdktf-provider-archive-go/archive/v6/dataarchivefile/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/archive/d/file archive_file}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file}.
 type DataArchiveFile interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataArchiveFile interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -152,8 +152,8 @@ func (j *jsiiProxy_DataArchiveFile) ConstructNodeMetadata() *map[string]interfac
 	return returns
 }
 
-func (j *jsiiProxy_DataArchiveFile) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataArchiveFile) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -503,7 +503,7 @@ func (j *jsiiProxy_DataArchiveFile) TypeInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/archive/d/file archive_file} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file} Data Source.
 func NewDataArchiveFile(scope constructs.Construct, id *string, config *DataArchiveFileConfig) DataArchiveFile {
 	_init_.Initialize()
 
@@ -521,7 +521,7 @@ func NewDataArchiveFile(scope constructs.Construct, id *string, config *DataArch
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/archive/d/file archive_file} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file} Data Source.
 func NewDataArchiveFile_Override(d DataArchiveFile, scope constructs.Construct, id *string, config *DataArchiveFileConfig) {
 	_init_.Initialize()
 
@@ -532,7 +532,10 @@ func NewDataArchiveFile_Override(d DataArchiveFile, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_DataArchiveFile)SetCount(val *float64) {
+func (j *jsiiProxy_DataArchiveFile)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

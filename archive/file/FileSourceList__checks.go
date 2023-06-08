@@ -28,6 +28,8 @@ func (f *jsiiProxy_FileSourceList) validateResolveParameters(_context cdktf.IRes
 
 func (j *jsiiProxy_FileSourceList) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
 	case *[]*FileSource:
 		val := val.(*[]*FileSource)
 		for idx_97dfc6, v := range *val {
@@ -43,11 +45,9 @@ func (j *jsiiProxy_FileSourceList) validateSetInternalValueParameters(val interf
 				return err
 			}
 		}
-	case cdktf.IResolvable:
-		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *[]*FileSource, cdktf.IResolvable; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*FileSource; received %#v (a %T)", val, val)
 		}
 	}
 

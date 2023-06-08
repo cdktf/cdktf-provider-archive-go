@@ -116,6 +116,8 @@ func (f *jsiiProxy_File) validatePutSourceParameters(value interface{}) error {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
 	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
 	case *[]*FileSource:
 		value := value.(*[]*FileSource)
 		for idx_cd4240, v := range *value {
@@ -131,11 +133,9 @@ func (f *jsiiProxy_File) validatePutSourceParameters(value interface{}) error {
 				return err
 			}
 		}
-	case cdktf.IResolvable:
-		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
-			return fmt.Errorf("parameter value must be one of the allowed types: *[]*FileSource, cdktf.IResolvable; received %#v (a %T)", value, value)
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*FileSource; received %#v (a %T)", value, value)
 		}
 	}
 
@@ -259,6 +259,26 @@ func (j *jsiiProxy_File) validateSetCountParameters(val interface{}) error {
 func (j *jsiiProxy_File) validateSetExcludesParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_File) validateSetExcludeSymlinkDirectoriesParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

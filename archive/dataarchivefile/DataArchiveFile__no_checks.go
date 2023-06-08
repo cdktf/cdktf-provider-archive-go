@@ -76,6 +76,10 @@ func (j *jsiiProxy_DataArchiveFile) validateSetExcludesParameters(val *[]*string
 	return nil
 }
 
+func (j *jsiiProxy_DataArchiveFile) validateSetExcludeSymlinkDirectoriesParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataArchiveFile) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

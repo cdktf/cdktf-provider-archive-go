@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file archive_file}.
 type DataArchiveFile interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -27,6 +27,9 @@ type DataArchiveFile interface {
 	Excludes() *[]*string
 	SetExcludes(val *[]*string)
 	ExcludesInput() *[]*string
+	ExcludeSymlinkDirectories() interface{}
+	SetExcludeSymlinkDirectories(val interface{})
+	ExcludeSymlinkDirectoriesInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -43,6 +46,7 @@ type DataArchiveFile interface {
 	// The tree node.
 	Node() constructs.Node
 	OutputBase64Sha256() *string
+	OutputBase64Sha512() *string
 	OutputFileMode() *string
 	SetOutputFileMode(val *string)
 	OutputFileModeInput() *string
@@ -51,6 +55,8 @@ type DataArchiveFile interface {
 	SetOutputPath(val *string)
 	OutputPathInput() *string
 	OutputSha() *string
+	OutputSha256() *string
+	OutputSha512() *string
 	OutputSize() *float64
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -108,6 +114,7 @@ type DataArchiveFile interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutSource(value interface{})
 	ResetExcludes()
+	ResetExcludeSymlinkDirectories()
 	ResetOutputFileMode()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -192,6 +199,26 @@ func (j *jsiiProxy_DataArchiveFile) ExcludesInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataArchiveFile) ExcludeSymlinkDirectories() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"excludeSymlinkDirectories",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataArchiveFile) ExcludeSymlinkDirectoriesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"excludeSymlinkDirectoriesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataArchiveFile) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -262,6 +289,16 @@ func (j *jsiiProxy_DataArchiveFile) OutputBase64Sha256() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataArchiveFile) OutputBase64Sha512() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputBase64Sha512",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataArchiveFile) OutputFileMode() *string {
 	var returns *string
 	_jsii_.Get(
@@ -317,6 +354,26 @@ func (j *jsiiProxy_DataArchiveFile) OutputSha() *string {
 	_jsii_.Get(
 		j,
 		"outputSha",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataArchiveFile) OutputSha256() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputSha256",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataArchiveFile) OutputSha512() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputSha512",
 		&returns,
 	)
 	return returns
@@ -503,7 +560,7 @@ func (j *jsiiProxy_DataArchiveFile) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file archive_file} Data Source.
 func NewDataArchiveFile(scope constructs.Construct, id *string, config *DataArchiveFileConfig) DataArchiveFile {
 	_init_.Initialize()
 
@@ -521,7 +578,7 @@ func NewDataArchiveFile(scope constructs.Construct, id *string, config *DataArch
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file archive_file} Data Source.
 func NewDataArchiveFile_Override(d DataArchiveFile, scope constructs.Construct, id *string, config *DataArchiveFileConfig) {
 	_init_.Initialize()
 
@@ -558,6 +615,17 @@ func (j *jsiiProxy_DataArchiveFile)SetExcludes(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"excludes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataArchiveFile)SetExcludeSymlinkDirectories(val interface{}) {
+	if err := j.validateSetExcludeSymlinkDirectoriesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"excludeSymlinkDirectories",
 		val,
 	)
 }
@@ -947,6 +1015,14 @@ func (d *jsiiProxy_DataArchiveFile) ResetExcludes() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetExcludes",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataArchiveFile) ResetExcludeSymlinkDirectories() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetExcludeSymlinkDirectories",
 		nil, // no parameters
 	)
 }

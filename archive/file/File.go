@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file}.
 type File interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -31,6 +31,9 @@ type File interface {
 	Excludes() *[]*string
 	SetExcludes(val *[]*string)
 	ExcludesInput() *[]*string
+	ExcludeSymlinkDirectories() interface{}
+	SetExcludeSymlinkDirectories(val interface{})
+	ExcludeSymlinkDirectoriesInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -47,6 +50,7 @@ type File interface {
 	// The tree node.
 	Node() constructs.Node
 	OutputBase64Sha256() *string
+	OutputBase64Sha512() *string
 	OutputFileMode() *string
 	SetOutputFileMode(val *string)
 	OutputFileModeInput() *string
@@ -55,6 +59,8 @@ type File interface {
 	SetOutputPath(val *string)
 	OutputPathInput() *string
 	OutputSha() *string
+	OutputSha256() *string
+	OutputSha512() *string
 	OutputSize() *float64
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -116,6 +122,7 @@ type File interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutSource(value interface{})
 	ResetExcludes()
+	ResetExcludeSymlinkDirectories()
 	ResetOutputFileMode()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -210,6 +217,26 @@ func (j *jsiiProxy_File) ExcludesInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_File) ExcludeSymlinkDirectories() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"excludeSymlinkDirectories",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_File) ExcludeSymlinkDirectoriesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"excludeSymlinkDirectoriesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_File) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -280,6 +307,16 @@ func (j *jsiiProxy_File) OutputBase64Sha256() *string {
 	return returns
 }
 
+func (j *jsiiProxy_File) OutputBase64Sha512() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputBase64Sha512",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_File) OutputFileMode() *string {
 	var returns *string
 	_jsii_.Get(
@@ -335,6 +372,26 @@ func (j *jsiiProxy_File) OutputSha() *string {
 	_jsii_.Get(
 		j,
 		"outputSha",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_File) OutputSha256() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputSha256",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_File) OutputSha512() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputSha512",
 		&returns,
 	)
 	return returns
@@ -531,7 +588,7 @@ func (j *jsiiProxy_File) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file} Resource.
 func NewFile(scope constructs.Construct, id *string, config *FileConfig) File {
 	_init_.Initialize()
 
@@ -549,7 +606,7 @@ func NewFile(scope constructs.Construct, id *string, config *FileConfig) File {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file} Resource.
 func NewFile_Override(f File, scope constructs.Construct, id *string, config *FileConfig) {
 	_init_.Initialize()
 
@@ -597,6 +654,17 @@ func (j *jsiiProxy_File)SetExcludes(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"excludes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_File)SetExcludeSymlinkDirectories(val interface{}) {
+	if err := j.validateSetExcludeSymlinkDirectoriesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"excludeSymlinkDirectories",
 		val,
 	)
 }
@@ -997,6 +1065,14 @@ func (f *jsiiProxy_File) ResetExcludes() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetExcludes",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_File) ResetExcludeSymlinkDirectories() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetExcludeSymlinkDirectories",
 		nil, // no parameters
 	)
 }

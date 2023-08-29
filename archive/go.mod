@@ -1,4 +1,4 @@
-module github.com/cdktf/cdktf-provider-archive-go/archive/v8
+module github.com/cdktf/cdktf-provider-archive-go/archive/v9
 
 go 1.18
 

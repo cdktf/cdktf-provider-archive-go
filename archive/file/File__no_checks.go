@@ -7,6 +7,10 @@ package file
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (f *jsiiProxy_File) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_File) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (f *jsiiProxy_File) validateGetStringMapAttributeParameters(terraformAttrib
 	return nil
 }
 
+func (f *jsiiProxy_File) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_File) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (f *jsiiProxy_File) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (f *jsiiProxy_File) validateOverrideLogicalIdParameters(newLogicalId *strin
 }
 
 func (f *jsiiProxy_File) validatePutSourceParameters(value interface{}) error {
+	return nil
+}
+
+func validateFile_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

@@ -5,10 +5,10 @@ package file
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-archive-go/archive/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-archive-go/archive/v9/file/internal"
+	"github.com/cdktf/cdktf-provider-archive-go/archive/v10/file/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -154,6 +154,9 @@ type File interface {
 	ResetSourceDir()
 	ResetSourceFile()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -1247,6 +1250,32 @@ func (f *jsiiProxy_File) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		f,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_File) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		f,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_File) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -7,11 +7,11 @@ package file
 type FileSource struct {
 	// Add this content to the archive with `filename` as the filename.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/resources/file#content File#content}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.0/docs/resources/file#content File#content}
 	Content *string `field:"required" json:"content" yaml:"content"`
 	// Set this as the filename when declaring a `source`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/resources/file#filename File#filename}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.0/docs/resources/file#filename File#filename}
 	Filename *string `field:"required" json:"filename" yaml:"filename"`
 }
 
